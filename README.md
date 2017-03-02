@@ -21,13 +21,13 @@ export class Home extends Component {
 }
 ```
 ### Incomplete Tasks
-**The third column, but made sure the data reaches the third column**.
-**Didnt take care of fonts**
-**Couple of colors might look a bit differemt**
+- The third column, but made sure the data reaches the third column**.
+- Didnt take care of fonts**
+- Couple of colors might look a bit differemt**
 
 ### Confusing points
--To export the assets, it would have been nice if the assets were named with extension .png. Saves a bit of time for exporting
--The sample data had no info about the contact list. Linking the contact list with the threads was easy but I found the data to be unorganised.
+- To export the assets, it would have been nice if the assets were named with extension .png. Saves a bit of time for exporting
+- The sample data had no info about the contact list. Linking the contact list with the threads was easy but I found the data to be unorganised.
 
 ### Running the app
 ```
