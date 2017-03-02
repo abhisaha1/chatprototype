@@ -1,0 +1,254 @@
+
+$border_color: #EEE;
+$body_color: #333;
+$link_color: #333;
+
+//colors
+$color_orange: #ffbb55;
+$color_skyblue: #ebf7ff;
+
+
+body {
+    font-size: 14px;
+    color: $body_color;
+    overflow: hidden;
+}
+.no-margin {
+    margin: 0px;
+}
+.no-padding {
+    padding: 0px;
+}
+.list-group {
+    margin-bottom: 0px;
+}
+a,a:hover {
+    text-decoration: none;
+    color: $link_color;
+}
+.navbar {
+    min-height: 56px;
+    color: #FFF;
+    margin-bottom: 0px;
+    .menu-toggle-switch {
+        padding: 22px 24px;
+    }
+    .navbar-text {
+        margin: 17px 15px;
+    }
+    .profile-image {
+        padding: 8px;
+    }
+}
+.user-list {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid $border_color;
+    .filter-bar {
+        padding: 16px 24px;
+        flex: 0 0 auto;
+        border-bottom: 1px solid $border_color;
+        .filter:not(:last-child){
+            margin-right: 24px;
+        }
+        .filter-action:not(:last-child) {
+            margin-right: 16px;
+        }
+
+    }
+
+    .contacts {
+        flex: 1 1 auto;
+        .contacts-container {
+            overflow: scroll;
+            height: calc(100vh - 154px);
+        }
+        .contact-item {
+            border-right: none;
+            border-top: none;
+            border-bottom: 2px solid $border_color;
+            padding: 19px 24px 18px 24px;
+            line-height: 24px;
+            cursor: pointer;
+            &.selected {
+                background-color: $color_skyblue;
+            }
+            .contact-image {
+                margin-right: 16px;
+            }
+            .contact-name {
+                font-weight: 500;
+                font-size: 16px;
+            }
+            .contact-message {
+                font-size: 14px;
+                word-wrap: break-word;
+                display: flex;
+                overflow: auto;
+                line-height: 1.6;
+                width: calc(100% - 104px);
+            }
+            .time {
+                font-size: 12px;
+            }
+            .notification {
+                right: 25px;
+                position: absolute;
+                top: 48px;
+                background-color: #475a66;
+                color: #eee;
+                padding: 0px 9px;
+            }
+        }
+    }
+
+    .user-list-footer {
+        flex: 0 0 auto;
+    }
+
+}
+.chat-tabs {
+        border-top: 1px solid $border_color;
+        border-bottom: 1px solid $border_color;
+
+        .tab-wrapper {
+            display: inline-block;
+            padding: 0px 26px;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                border-right: 1px solid #eee;
+                height: 14px;
+                right: 0;
+                top: 16px;
+            }
+        }
+        .tab-item {
+            padding: 12px 0px;
+            &.active {
+                font-weight: 600;
+                border-bottom: 1px solid #666;
+            }
+        }
+    }
+.thread {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid $border_color;
+    %extend_1 {
+        top: 18px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+
+    .messages {
+        position: relative;
+        list-style: none;
+        padding: 20px 10px 0;
+        margin: 0;
+        flex: 0 0 auto;
+        height: calc(100vh - 216px);
+        overflow: scroll;
+        .message {
+            clear: both;
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            transition: all 0.5s linear;
+            opacity: 0;
+            &.left {
+                .avatar {
+                    float: left;
+                }
+                .text_wrapper {
+                    background-color: $color_orange;
+                    margin-left: 20px;
+                    border-top-left-radius: 22px;
+                    border-top-right-radius: 22px;
+                    border-bottom-right-radius: 22px;
+                }
+                .text_wrapper::after {
+                    right: 100%;
+                    border-right-color: $color_orange;
+                }
+                .text_wrapper::before {
+                    right: 100%;
+                    border-right-color: $color_orange;
+                }
+                .text {
+
+                }
+            }
+            &.right {
+                .avatar {
+                    float: right;
+                }
+                .text_wrapper {
+                    background-color: $color_skyblue;
+                    margin-right: 20px;
+                    float: right;
+                    border-top-left-radius: 22px;
+                    border-top-right-radius: 22px;
+                    border-bottom-left-radius: 22px;
+                    text-align: right;
+                }
+                .text_wrapper::after {
+                    left: 100%;
+                    border-left-color: $color_skyblue;
+                }
+                .text_wrapper::before {
+                    left: 100%;
+                    border-left-color: $color_skyblue;
+                }
+                .text {
+
+                }
+            }
+            &.appeared {
+                opacity: 1;
+            }
+            .avatar {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .text_wrapper {
+                display: inline-block;
+                padding: 8px 16px;
+                width: calc(100% - 85px);
+                min-width: 100px;
+                position: relative;
+
+                .text {
+                }
+            }
+        }
+    }
+
+
+    .thread-footer {
+        flex: 0 0 auto;
+        [contenteditable=true]{
+            padding: 24px;
+            overflow: scroll;
+            height:72px;
+            &:empty:before {
+                content: attr(placeholder);
+                display: block;
+            }
+        }
+        .emoji-wrapper {
+            margin: 0 24px;
+            line-height: 48px;
+            border-top: 1px solid #eee;
+        }
+    }
+
+}

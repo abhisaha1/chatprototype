@@ -1,0 +1,337 @@
+[
+  {
+    "id": "4656f5e5-99c5-55b5-9a88-08864e5da558",
+    "type": "chat",
+    "requested_by": "bart@example.com",
+    "initial_message": "Hi. I'm Troy McClure. You may remember me from such self-help tapes as \"Smoke Yourself Thin\" and \"Get Some Confidence, Stupid!\"",
+    "created_at": 1422282223087,
+    "page_url": "unknown",
+    "referrer_url": "not provided",
+    "entry_url": "http://www.awesome3ftcakes.com/booking.html",
+    "ip_address": "75.254.239.196",
+    "user_agent": "Mozilla/5.0 (Windows NT 5.0; WOW64; rv:10.2) Gecko/20100101 Firefox/10.2.4",
+    "latitude": -51.14755,
+    "longitude": 43.63716,
+    "chat_waittime": 47,
+    "chat_duration": 148,
+    "survey_score": 70,
+    "language_code": "en-us,en;q=0.5",
+    "transcript": [
+      {
+        "date": 1422282223087,
+        "alias": "Bart",
+        "message": "Hi. I'm Troy McClure. You may remember me from such self-help tapes as \"Smoke Yourself Thin\" and \"Get Some Confidence, Stupid!\""
+      },
+      {
+        "date": 1422282339256,
+        "alias": "Bart",
+        "message": "Homer no function beer well without."
+      },
+      {
+        "date": 1422282261849,
+        "alias": "Bart",
+        "message": "I didn't get rich by signing checks."
+      },
+      {
+        "id": "aaron@awesome3ftcakes.com",
+        "date": 1422282352399,
+        "alias": "Aaron",
+        "message": "Perhaps, but perhaps your civilization is merely the sewer of an even greater society above you!"
+      },
+      {
+        "date": 1422282275992,
+        "alias": "Bart",
+        "message": "D'oh. I'm allergic to bee stings."
+      }
+    ]
+  },
+  {
+    "id": "6af2c355-385a-555c-a56c-ab37418007ce",
+    "type": "chat",
+    "requested_by": "homer@example.com",
+    "initial_message": "Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home winemaking course, and I forgot how to drive?",
+    "created_at": 1420458591691,
+    "page_url": "http://www.awesome3ftcakes.com/menu.html",
+    "referrer_url": "http://www.google.com/?q=rasobeka",
+    "entry_url": "unknown",
+    "ip_address": "11.39.32.234",
+    "user_agent": "Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.3; Trident/4.0)",
+    "latitude": 87.46308,
+    "longitude": -23.6942,
+    "chat_waittime": 30,
+    "chat_duration": 528,
+    "survey_score": 60,
+    "language_code": "en-US,en;q=0.8,de;q=0.6",
+    "transcript": [
+      {
+        "date": 1420458591691,
+        "alias": "Homer",
+        "message": "Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home winemaking course, and I forgot how to drive?"
+      },
+      {
+        "date": 1420459107117,
+        "alias": "Homer",
+        "message": "Oh, so they have Internet on computers now!"
+      },
+      {
+        "id": "snaposaurus@awesome3ftcakes.com",
+        "date": 1420458879565,
+        "alias": "Snaposaurus",
+        "message": "This is the greatest case of false advertising I've seen since I sued the movie \"The Never Ending Story.\""
+      },
+      {
+        "date": 1420458801769,
+        "alias": "Homer",
+        "message": "Bender, quit destroying the universe!"
+      },
+      {
+        "date": 1420458593355,
+        "alias": "Homer",
+        "message": "This is the greatest case of false advertising I've seen since I sued the movie \"The Never Ending Story.\""
+      },
+      {
+        "date": 1420458836680,
+        "alias": "Homer",
+        "message": "I didn't get rich by signing checks."
+      },
+      {
+        "id": "snaposaurus@awesome3ftcakes.com",
+        "date": 1420458932596,
+        "alias": "Snaposaurus",
+        "message": "Oh, loneliness and cheeseburgers are a dangerous mix. "
+      }
+    ]
+  },
+  {
+    "id": "c808d7cd-e470-5e85-8da7-516a1a6a9852",
+    "type": "offline",
+    "requested_by": "homer@example.com",
+    "initial_message": "Is any of this getting through to you?",
+    "created_at": 1421213300904,
+    "page_url": "http://www.awesome3ftcakes.com/menu.html",
+    "referrer_url": "",
+    "entry_url": "http://www.awesome3ftcakes.com/about.html",
+    "ip_address": "65.51.81.217",
+    "user_agent": "Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.0; Trident/6.0)",
+    "latitude": 88.88981,
+    "longitude": -145.48045,
+    "language_code": "en-us,en;q=0.5"
+  },
+  {
+    "id": "e11abcd1-a51a-5a7c-80da-a53e752b2f97",
+    "type": "offline",
+    "requested_by": "leela@example.com",
+    "initial_message": "Kids, we need to talk for a moment about Krusty Brand Chew Goo Gum Like Substance.",
+    "created_at": 1420731533539,
+    "page_url": "http://www.awesome3ftcakes.com/contact-us.html",
+    "referrer_url": "http://www.bing.com/search?q=ob",
+    "entry_url": "http://www.awesome3ftcakes.com/about.html",
+    "ip_address": "70.234.236.76",
+    "user_agent": "Mozilla/5.0 (Windows NT 5.1; Win64; x64; rv:5.1) Gecko/20100101 Firefox/5.1.6",
+    "latitude": -1.25932,
+    "longitude": -36.22924,
+    "language_code": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+  },
+  {
+    "id": "e978a9b0-995e-5290-9a28-16d3fbb3e172",
+    "type": "chat",
+    "requested_by": "mike@example.com",
+    "initial_message": "Fry, you can't just sit here in the dark listening to classical music.",
+    "created_at": 1421104016274,
+    "page_url": "unknown",
+    "referrer_url": "http://search.yahoo.com/search?p=mujwel",
+    "entry_url": "http://www.awesome3ftcakes.com/contact-us.html",
+    "ip_address": "4.16.164.198",
+    "user_agent": "Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/7.1)",
+    "latitude": -72.04637,
+    "longitude": 27.99001,
+    "chat_waittime": 43,
+    "chat_duration": 884,
+    "survey_score": 20,
+    "language_code": "en-US,en;q=0.8,es;q=0.6,es-419;q=0.4",
+    "transcript": [
+      {
+        "date": 1421104016274,
+        "alias": "Mike",
+        "message": "Fry, you can't just sit here in the dark listening to classical music."
+      },
+      {
+        "date": 1421104837670,
+        "alias": "Mike",
+        "message": "Your questions have become more redundant and annoying than the last three \"Highlander\" movies."
+      },
+      {
+        "date": 1421104193700,
+        "alias": "Mike",
+        "message": "Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon."
+      },
+      {
+        "date": 1421104125025,
+        "alias": "Mike",
+        "message": "Good news, everyone! I've taught the toaster to feel love!"
+      },
+      {
+        "date": 1421104308056,
+        "alias": "Mike",
+        "message": "Your questions have become more redundant and annoying than the last three \"Highlander\" movies."
+      },
+      {
+        "id": "snaposaurus@awesome3ftcakes.com",
+        "date": 1421104363648,
+        "alias": "Snaposaurus",
+        "message": "Is any of this getting through to you?"
+      }
+    ]
+  },
+  {
+    "id": "95e092b3-c39e-5a12-8640-7f0a9ff56075",
+    "type": "chat",
+    "requested_by": "marge@example.com",
+    "initial_message": "I'm normally not a praying man, but if you're up there, please save me, Superman.",
+    "created_at": 1422025621388,
+    "page_url": "http://www.awesome3ftcakes.com/about.html",
+    "referrer_url": "",
+    "entry_url": "unknown",
+    "ip_address": "215.148.142.114",
+    "user_agent": "Mozilla/5.0 (Windows; U; Windows NT 5.1) AppleWebKit/533.0.1 (KHTML, like Gecko) Chrome/31.0.848.0 Safari/533.0.1",
+    "latitude": -3.72259,
+    "longitude": -86.54144,
+    "chat_waittime": 44,
+    "chat_duration": 164,
+    "survey_score": 60,
+    "language_code": "en-US,en;q=0.8,de;q=0.6",
+    "transcript": [
+      {
+        "date": 1422025621388,
+        "alias": "Marge",
+        "message": "I'm normally not a praying man, but if you're up there, please save me, Superman."
+      },
+      {
+        "date": 1422025641623,
+        "alias": "Marge",
+        "message": "When you do things right, people won't be sure you've done anything at all."
+      },
+      {
+        "id": "jenny@awesome3ftcakes.com",
+        "date": 1422025764529,
+        "alias": "Jenny",
+        "message": "Hi. I'm Troy McClure. You may remember me from such self-help tapes as \"Smoke Yourself Thin\" and \"Get Some Confidence, Stupid!\""
+      },
+      {
+        "date": 1422025762484,
+        "alias": "Marge",
+        "message": "Facts are meaningless. You could use facts to prove anything that's even remotely true!"
+      },
+      {
+        "id": "jenny@awesome3ftcakes.com",
+        "date": 1422025689625,
+        "alias": "Jenny",
+        "message": "All I want is to be a monkey of moderate intelligence who wears a suit… that's why I'm transferring to business school!"
+      },
+      {
+        "id": "jenny@awesome3ftcakes.com",
+        "date": 1422025761805,
+        "alias": "Jenny",
+        "message": "Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon."
+      },
+      {
+        "id": "jenny@awesome3ftcakes.com",
+        "date": 1422025744382,
+        "alias": "Jenny",
+        "message": "Fry, you can't just sit here in the dark listening to classical music."
+      },
+      {
+        "id": "jenny@awesome3ftcakes.com",
+        "date": 1422025681059,
+        "alias": "Jenny",
+        "message": "Facts are meaningless. You could use facts to prove anything that's even remotely true!"
+      },
+      {
+        "date": 1422025692152,
+        "alias": "Marge",
+        "message": "Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home winemaking course, and I forgot how to drive?"
+      },
+      {
+        "id": "jenny@awesome3ftcakes.com",
+        "date": 1422025640084,
+        "alias": "Jenny",
+        "message": "And here I am using my own lungs like a sucker."
+      }
+    ]
+  },
+  {
+    "id": "3ece3581-6da8-5149-876d-705aa4c2e41c",
+    "type": "chat",
+    "requested_by": "moe@example.com",
+    "initial_message": "I prefer a vehicle that doesn't hurt Mother Earth. It's a go-cart, powered by my own sense of self-satisfaction.",
+    "created_at": 1422250875830,
+    "page_url": "http://www.awesome3ftcakes.com/about.html",
+    "referrer_url": "http://www.bing.com/search?q=zodwok",
+    "entry_url": "http://www.awesome3ftcakes.com/about.html",
+    "ip_address": "138.243.56.107",
+    "user_agent": "Mozilla/5.0 (X11; Linux i686; rv:14.9) Gecko/20100101 Firefox/14.9.6",
+    "latitude": 14.77582,
+    "longitude": 92.55738,
+    "chat_waittime": 23,
+    "chat_duration": 430,
+    "survey_score": 100,
+    "language_code": "en-US,en;q=0.8,de;q=0.6",
+    "transcript": [
+      {
+        "date": 1422250875830,
+        "alias": "Moe",
+        "message": "I prefer a vehicle that doesn't hurt Mother Earth. It's a go-cart, powered by my own sense of self-satisfaction."
+      },
+      {
+        "id": "nate@awesome3ftcakes.com",
+        "date": 1422250982099,
+        "alias": "Nate",
+        "message": "Good news, everyone! I've taught the toaster to feel love!"
+      },
+      {
+        "id": "nate@awesome3ftcakes.com",
+        "date": 1422251129833,
+        "alias": "Nate",
+        "message": "Your questions have become more redundant and annoying than the last three \"Highlander\" movies."
+      },
+      {
+        "id": "nate@awesome3ftcakes.com",
+        "date": 1422250921287,
+        "alias": "Nate",
+        "message": "Brace yourselves gentlemen. According to the gas chromatograph, the secret ingredient is… Love!? "
+      },
+      {
+        "date": 1422251223797,
+        "alias": "Moe",
+        "message": "This is the greatest case of false advertising I've seen since I sued the movie \"The Never Ending Story.\""
+      },
+      {
+        "date": 1422250936292,
+        "alias": "Moe",
+        "message": "All I want is to be a monkey of moderate intelligence who wears a suit… that's why I'm transferring to business school!"
+      },
+      {
+        "id": "nate@awesome3ftcakes.com",
+        "date": 1422251089572,
+        "alias": "Nate",
+        "message": "You don't like your job, you don't strike. You go in every day and do it really half-assed. That's the American way."
+      },
+      {
+        "date": 1422250985350,
+        "alias": "Moe",
+        "message": "One hundred dollars."
+      },
+      {
+        "date": 1422251169604,
+        "alias": "Moe",
+        "message": "Is any of this getting through to you?"
+      },
+      {
+        "id": "nate@awesome3ftcakes.com",
+        "date": 1422251067883,
+        "alias": "Nate",
+        "message": "What good is money if it can't inspire terror in your fellow man?"
+      }
+    ]
+  }
+]
