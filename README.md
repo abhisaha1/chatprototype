@@ -24,6 +24,7 @@ export class Home extends Component {
 - The third column, but made sure the data reaches the third column**.
 - Didnt take care of fonts**
 - Couple of colors might look a bit differemt**
+- ESLint.
 
 ### Confusing points
 - To export the assets, it would have been nice if the assets were named with extension .png. Saves a bit of time for exporting
