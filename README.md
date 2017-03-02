@@ -7,7 +7,7 @@ React & Redux in the FrontEnd running on NodeJS server using Express.
 **Client**  is the main folder of the application. It has been further structured into multiple folders. Each folder has it own responsibility. Containers can be considered as views while components are reusable components which are used in containers.
 
 The file **client/serverRendering.js** is meant to handle code execution on server. However not every file is required to be rendered on the server. If we need server rendering then the component should have a static variable by the name preFretch. Like below:
-
+However for this demo, this is not required.
 ```js
 export class Home extends Component {
     static prefetchData = [
@@ -19,7 +19,7 @@ export class Home extends Component {
         )
     }
 }
-
+```
 ### Incomplete Tasks
 **The third column, but made sure the data reaches the third column**.
 **Didnt take care of fonts**
