@@ -1,47 +1,51 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractSass = new ExtractTextPlugin({
+    filename: "../css/style.css"
+});
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: "source-map",
     entry: {
-        dashboard: ['./app/dashboard'],
-        client: ['./client/client']
+        src: ["./src/client"]
     },
     output: {
-        path: path.join(__dirname, 'public/js'),
-        filename: '[name]-bundle.js',
-        publicPath: '/static/'
+        path: path.join(__dirname, "public/js"),
+        filename: "[name]-bundle.js",
+        publicPath: "/static/"
     },
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.DefinePlugin({
-            'process.env': {
-                'NODE_ENV': "'production'"
+            "process.env": {
+                NODE_ENV: "'production'"
             }
         }),
         new webpack.optimize.UglifyJsPlugin({
             compressor: {
                 warnings: false
             }
-        })
+        }),
+        extractSass
     ],
     module: {
-        loaders: [
+        rules: [
             // js
             {
                 test: /\.js$/,
-                loaders: ['babel'],
-                include: path.join(__dirname, 'app')
-            }, {
-                test: /\.js$/,
-                loaders: ['babel'],
-                include: path.join(__dirname, 'client')
+                loaders: ["babel-loader"],
+                include: path.join(__dirname, "src")
             },
             // CSS
             {
-                test: /\.styl$/,
-                include: path.join(__dirname, 'app'),
-                loader: 'style-loader!css-loader!stylus-loader'
+                test: /\.scss$/,
+                use: extractSass.extract({
+                    fallback: "style-loader",
+                    use: ["css-loader", "sass-loader"],
+                    publicPath: path.join(__dirname, "public/css")
+                }),
+                include: path.join(__dirname, "public/scss")
             }
         ]
     }

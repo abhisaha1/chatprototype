@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as ActionCreators from "../redux/actions/ActionCreators";
-import "../../public/css/style.scss";
+import "../../public/scss/style.scss";
 
 class App extends Component {
     render() {
@@ -17,8 +17,15 @@ class App extends Component {
                             />
                         </div>
                         <div className="navbar-header pull-right">
-                            <p className="navbar-text profile-name">Martha Gandron </p>
-                            <span><img className="profile-image" src="/images/Avatar.png" /></span>
+                            <p className="navbar-text profile-name">
+                                Marthaaa Gandron{" "}
+                            </p>
+                            <span>
+                                <img
+                                    className="profile-image"
+                                    src="/images/Avatar.png"
+                                />
+                            </span>
                         </div>
                     </div>
                 </nav>

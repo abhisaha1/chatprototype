@@ -1,10 +1,10 @@
 require.extensions[".sass"] = () => {
-    return '';
-}
+    return "";
+};
 
 require.extensions[".scss"] = () => {
-    return '';
-}
+    return "";
+};
 
-require('babel-register');
-require('./client/server');
+require("babel-register");
+require("./src/server");
