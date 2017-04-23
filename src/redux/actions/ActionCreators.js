@@ -6,30 +6,15 @@ import siteConfig from "../../../config/site.config";
 
 export function fetchChatData() {
     return function(dispatch, state) {
-
         dispatch(ChatDataRequest());
 
-        let data = state().data;
+        //let data = state.data;
 
         return fetch(`${siteConfig.apiDataLink}`)
             .then(checkHttpStatus)
             .then(parseJSON)
             .then(response => {
-                try {
-                    setTimeout(() => {
-                        dispatch(ChatDataRequestSuccess(response));
-                    },1000)
-
-                } catch (e) {
-                    dispatch(
-                        ChatDataRequestFailure({
-                            response: {
-                                status: 403,
-                                statusText: "Problem fetching data from server"
-                            }
-                        })
-                    );
-                }
+                dispatch(ChatDataRequestSuccess(response));
             })
             .catch(error => {
                 dispatch(ChatDataRequestFailure(error));
@@ -62,11 +47,9 @@ export function ChatDataRequestFailure(error) {
 
 export function getThread(index) {
     return function(dispatch, state) {
-
         dispatch({
             type: ActionTypes.GET_MESSAGES,
             payload: index
-        })
-
+        });
     };
 }

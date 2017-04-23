@@ -1,22 +1,29 @@
 import React, { Component } from "react";
-import Moment from 'moment';
+import Moment from "moment";
 
-const Contact = React.createClass({
-
+class Contact extends Component {
+    constructor(props) {
+        super(props);
+    }
     itemClicked() {
         this.props.getThread(this.props.index);
-    },
+    }
     render() {
-
         return (
-            <li className={"list-group-item contact-item " + this.props.active} onClick={this.itemClicked}>
+            <li
+                className={"list-group-item contact-item " + this.props.active}
+                onClick={this.itemClicked.bind(this)}
+            >
                 <div className="pull-left hidden-xs contact-image">
                     <div>
                         <img width="48" src="/images/user1.png" />
                     </div>
                 </div>
                 <span className="pull-right text-muted time">
-                    { Moment(this.props.contact.created_at).format('h:mma').toUpperCase().slice(0,-1)}
+                    {Moment(this.props.contact.created_at)
+                        .format("h:mma")
+                        .toUpperCase()
+                        .slice(0, -1)}
                 </span>
                 <div>
                     <div className="list-group-item-heading contact-name">
@@ -30,10 +37,9 @@ const Contact = React.createClass({
             </li>
         );
     }
-});
+}
 
 export default class UserList extends Component {
-
     render() {
         return (
             <div className="col-lg-4 no-padding user-list column">
@@ -61,9 +67,23 @@ export default class UserList extends Component {
                         if (this.props.data.fetchingContacts) {
                             return "Loading...";
                         } else {
-                            let users = this.props.data.data.map((contact,i) => {
-                                return <Contact key={i} active={(this.props.data.activeUser === i) ? 'selected':''} getThread={ this.props.getThread } index={i} contact={contact} />
-                            })
+                            let users = this.props.data.data.map(
+                                (contact, i) => {
+                                    return (
+                                        <Contact
+                                            key={i}
+                                            active={
+                                                this.props.data.activeUser === i
+                                                    ? "selected"
+                                                    : ""
+                                            }
+                                            getThread={this.props.getThread}
+                                            index={i}
+                                            contact={contact}
+                                        />
+                                    );
+                                }
+                            );
 
                             return (
                                 <ul className="list-group contacts-container">

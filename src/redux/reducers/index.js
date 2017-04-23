@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
 /*
   Reducers
@@ -7,11 +7,11 @@ import { combineReducers } from 'redux';
   When state gets large, it makes sense to have multiple reducers that only deal with a piece of the state
 */
 
-import { routerReducer } from 'react-router-redux'; // we need this for react-router
+import { routerReducer } from "react-router-redux"; // we need this for react-router
 
-import data from './data';
+import data from "./data";
 
 // Combine all our reducers togeher
-const rootReducer = combineReducers({data, routing: routerReducer });
+const rootReducer = combineReducers({ data, routing: routerReducer });
 
 export default rootReducer;

@@ -7,10 +7,17 @@ import Thread from "../components/Thread";
 import UserInfo from "../components/UserInfo";
 import siteConfig from "../../config/site.config";
 
-export class Home extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
-        this.props.fetchChatData();
+    }
+    static fetchData(props) {
+        return ActionCreators.fetchChatData();
+    }
+    componentDidMount() {
+        if (this.props.data.length == 0) {
+            this.props.fetchChatData();
+        }
     }
 
     render() {

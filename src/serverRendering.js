@@ -6,43 +6,55 @@
 
 import React from "react";
 import ReactDOM from "react-dom/server";
-import { match, RouterContext } from "react-router";
+import { StaticRouter, Route, ServerRouter } from "react-router";
+import { matchPath } from "react-router-dom";
 import { Provider } from "react-redux";
 import routes from "./routes";
 import prefetchComponentData from "./utils/prefetchComponentData";
 import store from "./redux/createStore";
+import Home from "./containers/Home";
+import App from "./containers/App";
 
 module.exports = function(req, res) {
-    match(
-        {
-            routes,
-            location: req.url
-        },
-        (error, redirectLocation, renderProps) => {
-            if (error) {
-                res.status(500).send(error.message);
-            } else if (redirectLocation) {
-                res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-            } else if (renderProps) {
-                prefetchComponentData(store.dispatch, renderProps.components, renderProps.params, req)
-                    .then(renderHTML)
-                    .then(html => res.status(200).send(html))
-                    .catch(err => res.end(err.message));
-            } else {
-                res.status(404).send("Not found");
-            }
+    const matches = routes.reduce((matches, route) => {
+        const match = matchPath(req.url, route.path, route);
+        if (match) {
+            matches.push({
+                route,
+                match,
+                promise: route.component.fetchData
+                    ? route.component.fetchData(match)(
+                          store.dispatch,
+                          store.getState()
+                      )
+                    : Promise.resolve({})
+            });
+        }
+        return matches;
+    }, []);
 
-            function renderHTML() {
-                const initialState = store.getState();
-
-                const renderedComponent = ReactDOM.renderToString(
+    if (matches.length === 0) {
+        res.status(404);
+    }
+    const promises = matches.map(match => match.promise);
+    var bundle = process.env.NODE_ENV == "production"
+        ? "/js/client-bundle.js"
+        : "/static/client-bundle.js";
+    Promise.all(promises).then(
+        () => {
+            const data = store.getState();
+            const context = {};
+            const renderedComponent = ReactDOM.renderToString(
+                <StaticRouter context={context} location={req.url}>
                     <Provider store={store}>
-                        <RouterContext {...renderProps} />
+                        <App routes={routes} initialData={data} />
                     </Provider>
-                );
+                </StaticRouter>
+            );
 
-                var bundle = process.env.NODE_ENV == "production" ? "/js/client-bundle.js" : "/static/client-bundle.js";
-
+            if (context.url) {
+                res.redirect(context.url);
+            } else {
                 const HTML = `
                 <!DOCTYPE html>
                 <html lang="en">
@@ -56,15 +68,21 @@ module.exports = function(req, res) {
                   <body id="client">
                     <div id="app">${renderedComponent}</div>
                     <script type="application/javascript">
-                       window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
+                       window.__INITIAL_STATE__ = ${JSON.stringify(data)};
                     </script>
                     <script src="${bundle}"></script>
 
                   </body>
                 </html>
             `;
-                return HTML;
+                res.send(HTML);
             }
+        },
+        error => {
+            debugger;
+            console.log(error);
+            res.json(error);
+            //handleError(res, error);
         }
     );
 };

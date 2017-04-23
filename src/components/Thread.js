@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const Message = React.createClass({
+class Message extends Component {
     render() {
         return (
             <li className={"message appeared " + this.props.direction}>
@@ -13,7 +13,7 @@ const Message = React.createClass({
             </li>
         );
     }
-});
+}
 
 export default class Thread extends Component {
     render() {

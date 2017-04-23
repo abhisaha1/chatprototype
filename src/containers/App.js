@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as ActionCreators from "../redux/actions/ActionCreators";
+import { Route } from "react-router";
+import Home from "./Home";
 import "../../public/scss/style.scss";
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
                         </div>
                         <div className="navbar-header pull-right">
                             <p className="navbar-text profile-name">
-                                Marthaaa Gandron{" "}
+                                Martha Gandron{" "}
                             </p>
                             <span>
                                 <img
@@ -29,9 +29,7 @@ class App extends Component {
                         </div>
                     </div>
                 </nav>
-                <div>
-                    {React.cloneElement(this.props.children, this.props)}
-                </div>
+                <Route pattern="/" component={Home} />
             </div>
         );
     }
